@@ -50,7 +50,6 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 //temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
 
 function showWeather(response) {
-  console.log(response);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
