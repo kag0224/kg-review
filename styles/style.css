@@ -1,0 +1,44 @@
+h1 {
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #7a7f84;
+}
+
+.temperature {
+  font-size: 48px;
+}
+
+.weather-icon {
+  position: relative;
+  top: -11px;
+}
+
+.units {
+  position: relative;
+  top: -23px;
+}
+
+.right {
+  text-align: right;
+}
+
+.weatherApp {
+  border: 1px solid #d4d4d4;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.search-form {
+  margin-bottom: 10px;
+}
