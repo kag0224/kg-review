@@ -22,53 +22,51 @@
   <body>
     <div class="container">
       <div class="weatherApp">
-        <div class="clearfix">
-          <form class="search-form" id="search-form">
-            <div class="row">
-              <div class="col-9">
-                <input
-                  type="search"
-                  placeholder="Search for a city"
-                  autocomplete="off"
-                  autofocus="on"
-                  id="city-input"
-                  class="form-control shadow-sm"
-                />
-              </div>
-              <div class="col-3">
-                <input
-                  type="submit"
-                  value="Search"
-                  class="form-control btn btn-primary shadow-sm"
-                />
-              </div>
-            </div>
-          </form>
-          <h1 id="city"></h1>
-          <img
-            src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-            alt="moon"
-            class="weather-icon float-left"
-          />
-          <span class="temperature" id="temperature"> </span>
-          <span class="units">
-            <a href="#" id="celsius-link">°C</a> |
-            <a href="#" id="fahrenheit-link">°F</a>
-          </span>
+        <form class="search-form" id="search-form">
           <div class="row">
-            <div class="col-6">
-              <ul>
-                <li>Precipitation: 0%</li>
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span> mph</li>
-              </ul>
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Search for a city"
+                autocomplete="off"
+                autofocus="on"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
             </div>
-            <div class="right col-6">
-              <ul>
-                <li id="date-today"></li>
-                <li id="description"></li>
-              </ul>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm"
+              />
             </div>
+          </div>
+        </form>
+        <h1 id="city"></h1>
+        <img
+          src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+          alt="moon"
+          class="weather-icon float-left"
+        />
+        <span class="temperature" id="temperature"> </span>
+        <span class="units">
+          <a href="#" id="celsius-link">°C</a> |
+          <a href="#" id="fahrenheit-link">°F</a>
+        </span>
+        <div class="row">
+          <div class="col-6">
+            <ul>
+              <li id="date-today"></li>
+              <li id="description"></li>
+            </ul>
+          </div>
+          <div class="right col-6">
+            <ul>
+              <li>Precipitation: 0%</li>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> mph</li>
+            </ul>
           </div>
         </div>
       </div>
