@@ -1,5 +1,5 @@
 h1 {
-  margin: 0;
+  margin: 10px 0 5px 0;
 }
 
 ul {
@@ -9,8 +9,14 @@ ul {
   color: #7a7f84;
 }
 
+a {
+  text-decoration: none;
+  color: #a7a7a7;
+}
+
 .temperature {
   font-size: 50px;
+  margin-left: 8px;
 }
 
 .weather-icon {
@@ -31,8 +37,15 @@ ul {
   border: 1px solid #d4d4d4;
   border-radius: 10px;
   padding: 15px;
-  margin: 20px auto;
+}
+
+.weather-app-wrapper {
   max-width: 600px;
+  margin: 20px auto;
+}
+
+.weather-icon img {
+  margin-top: 20px;
 }
 
 .search-form {
