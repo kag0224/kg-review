@@ -29,26 +29,6 @@ let currentTime = new Date();
 
 dateToday.innerHTML = formatDate(currentTime);
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 66;
-}
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 19;
-}
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-//let celsiusLink = document.querySelector("#celsius-link");
-//celsiusLink.addEventListener("click", convertToCelsius);
-
-//temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
-
 function showWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -74,8 +54,26 @@ function handleSubmit(event) {
   search(city);
 }
 
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemperature = (temperatureElement.innerHTML * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+//function convertToCelsius(event) {
+//  event.preventDefault();
+//  let temperatureElement = document.querySelector("#temperature");
+//}
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
+
+//let celsiusLink = document.querySelector("#celsius-link");
+//celsiusLink.addEventListener("click", convertToCelsius);
 
 search("Las Vegas");
 
@@ -83,5 +81,3 @@ search("Las Vegas");
 //let cityElement = document.querySelector("#city");
 //let cityInput = document.querySelector("#city-input");
 //cityElement.innerHTML = cityInput.value;
-
-//https://api.openweathermap.org/data/2.5/weather?q=las vegas&appid=748e575d7c9421f3b821d29a87e2a544
