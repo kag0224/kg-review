@@ -30,16 +30,19 @@ let currentTime = new Date();
 dateToday.innerHTML = formatDate(currentTime);
 
 function showWeather(response) {
-  document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+  let cityElement = document.querySelector("#city");
+  let temperatureElement = document.querySelector("#temperature");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let descriptionElement = document.querySelector("#description");
+
+  celsiusTemperature = response.data.main.temp;
+
+  cityElement.innerHTML = response.data.name;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  descriptionElement.innerHTML = response.data.weather[0].main;
 }
 
 function search(city) {
@@ -57,23 +60,30 @@ function handleSubmit(event) {
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let fahrenheitTemperature = (temperatureElement.innerHTML * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-//function convertToCelsius(event) {
-//  event.preventDefault();
-//  let temperatureElement = document.querySelector("#temperature");
-//}
+function convertToCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
+let celsiusTemperature = null;
+
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
-//let celsiusLink = document.querySelector("#celsius-link");
-//celsiusLink.addEventListener("click", convertToCelsius);
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
 
 search("Las Vegas");
 
