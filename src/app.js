@@ -29,34 +29,34 @@ let currentTime = new Date();
 
 dateToday.innerHTML = formatDate(currentTime);
 
-function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
+//function displayForecast() {
+//  let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Mon", "Tue", "Wed", "Thu"];
+//  let days = ["Mon", "Tue", "Wed", "Thu"];
 
-  let forecastHTML = `<div class="row">`;
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
-    <div class="col-3">
-      <div class="weather-forecast-day">${day}</div>
-    <img
-      src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-      alt=""
-      width="42"
-    />
-      <div class="weather-forecast-temp">
-      <span class="weather-forecast-temp-max">42°</span>
-      <span class="weather-forecast-temp-min">26°</span>
-      </div>
-    </div>
-  `;
-  });
+//  let forecastHTML = `<div class="row">`;
+//  days.forEach(function (day) {
+//    forecastHTML =
+//      forecastHTML +
+//      `
+//    <div class="col-3">
+//      <div class="weather-forecast-day">${day}</div>
+//    <img
+//      src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+//      alt=""
+//      width="42"
+//    />
+//      <div class="weather-forecast-temp">
+//      <span class="weather-forecast-temp-max">42°</span>
+//      <span class="weather-forecast-temp-min">26°</span>
+//      </div>
+//    </div>
+//  `;
+//  });
 
-  forecastHTMl = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
-}
+//  forecastHTMl = forecastHTML + `</div>`;
+//  forecastElement.innerHTML = forecastHTML;
+//}
 
 function showWeather(response) {
   let cityElement = document.querySelector("#city");
@@ -93,9 +93,4 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
 search("Las Vegas");
-displayForecast();
-
-//from search(event)
-//let cityElement = document.querySelector("#city");
-//let cityInput = document.querySelector("#city-input");
-//cityElement.innerHTML = cityInput.value;
+//displayForecast();
