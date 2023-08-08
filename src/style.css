@@ -1,5 +1,7 @@
 h1 {
-  margin: 10px 0 5px 0;
+  margin: 22px 0 5px 0;
+  font-size: 40px;
+  text-align: left;
 }
 
 ul {
@@ -20,7 +22,7 @@ a {
 
 .weather-icon {
   position: relative;
-  top: -11px;
+  top: -9px;
 }
 
 .units {
@@ -54,8 +56,11 @@ a {
 }
 
 .weather-icon img {
-  margin-top: 20px;
-  margin-left: -15px;
+  margin-top: 10px;
+}
+
+.icon-temp {
+  text-align: right;
 }
 
 .search-form {
@@ -74,8 +79,4 @@ a {
 
 .weather-forecast-temp {
   font-size: 13px;
-}
-
-.weather-forecast-temp-min {
-  opacity: 0.5;
 }
