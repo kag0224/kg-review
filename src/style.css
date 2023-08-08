@@ -2,22 +2,34 @@ h1 {
   margin: 22px 0 5px 0;
   font-size: 40px;
   text-align: left;
+  color: #c54b23;
 }
 
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  color: #7a7f84;
+  color: #e4663a;
 }
 
 a {
   text-decoration: none;
 }
 
+#city-input {
+  background-color: #fff175;
+  color: #c54b23;
+}
+
+.btn,
+.btn:hover {
+  color: rgb(30, 17, 104);
+}
+
 .temperature {
   font-size: 50px;
   margin-left: -6px;
+  color: rgb(30, 17, 104);
 }
 
 .weather-icon {
@@ -31,11 +43,6 @@ a {
   left: -5px;
 }
 
-.active {
-  cursor: default;
-  color: #000;
-}
-
 .right {
   text-align: right;
 }
@@ -45,9 +52,14 @@ a {
 }
 
 .weatherApp {
-  border: 1px solid #d4d4d4;
+  border: 1px solid #e4663a;
   border-radius: 10px;
   padding: 15px;
+  background: linear-gradient(
+    179deg,
+    rgb(255, 129, 27) -27.5%,
+    rgb(245, 255, 56) 94.7%
+  );
 }
 
 .weather-app-wrapper {
